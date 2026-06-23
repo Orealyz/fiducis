@@ -31,21 +31,4 @@ L'objectif est de virtualiser les services critiques au siège de Bordeaux, d'é
 - [Schéma réseau](./schemas/reseau.md)
 - [Scripts et automatisation](./scripts/README.md)
 
-## Déploiement rapide
 
-```bash
-# 1. Cloner le dépôt sur le nœud Proxmox (Bordeaux)
-git clone <url-repo> /opt/mspr-fiducis
-
-# 2. Configurer les variables
-cp scripts/vars.env.example scripts/vars.env
-nano scripts/vars.env
-
-# 3. Lancer la création des VMs de base
-bash scripts/setup-vm-base.sh
-
-# 4. Activer les snapshots automatiques
-bash scripts/snapshot-backup.sh
-```
-
-> Les ajustements effectués en cours de projet sont documentés dans [docs/04-limites-compromis.md](./docs/04-limites-compromis.md).
